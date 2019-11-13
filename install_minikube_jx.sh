@@ -13,8 +13,7 @@ buntu0~18.04.3_amd64.deb
 sudo dpkg -i libgl1-mesa-dri_19.0.8-0ubuntu0~18.04.3_amd64.deb
 sudo apt-get -fy install
 sudo apt install -y virtualbox
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
-be-linux-amd64
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 chmod +x minikube
 sudo cp minikube /usr/local/bin
 rm minikube
