@@ -22,9 +22,7 @@ sudo minikube start --vm-driver=none
 sudo apt install -y socat
 sudo snap install helm --classic
 sudo helm init
-sudo curl -L "https://github.com/jenkins-x/jx/releases/download/$(curl --silent 
-"https://github.com/jenkins-x/jx/releases/latest" | sed 's#.*tag/\(.*\)\".*#\1#'
-)/jx-linux-amd64.tar.gz" | tar xzv "jx"
+sudo curl -L "https://github.com/jenkins-x/jx/releases/download/$(curl --silent "https://github.com/jenkins-x/jx/releases/latest" | sed 's#.*tag/\(.*\)\".*#\1#')/jx-linux-amd64.tar.gz" | tar xzv "jx"
 sudo mv jx /usr/local/bin
 sudo sed -i'.bak' '/^    - --tls-private-key-file=\/var\/lib\/minikube\/certs\/apiserver.key.*/a\    \- --runtime-config=apps\/v1beta1=true,extensions\/v1beta1\/deployments=true' /etc/kubernetes/manifests/kube-apiserver.yaml
 sudo jx install cluster minikube --no-default-environments
