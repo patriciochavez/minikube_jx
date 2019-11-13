@@ -14,8 +14,6 @@ sudo apt-get -fy install
 sudo apt install -y virtualbox
 sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb && sudo dpkg -i minikube_1.5.2.deb
 sudo rm -f minikube_1.5.2.deb
-sudo cp minikube /usr/local/bin
-sudo rm -f minikube
 sudo minikube start --vm-driver=none
 sudo apt install -y socat
 sudo snap install helm --classic
